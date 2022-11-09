@@ -1,48 +1,46 @@
 #include <stdio.h>
 /*
 Varible list 
-float listaDeNumero
-int numeroTotalDeNumeros
-int posicionPrimra
-int posicionSegunda
+float listNumber
+int totalNumber
+int firstPosition
 */
 void main()
 {
-    int numeroTotalDeNumeros=5, pasada, posicionPrimera,posicionSegunda;
-    int listaDeNumeros[numeroTotalDeNumeros];
-    /* printf("¿Cúantos numeros son en total?\n");
-    scanf("%i", &numeroTotalDeNumeros);
-    */
-    for (int i = 0; i < numeroTotalDeNumeros; i++)
+    int totalNumbber, pasada, firstPosition,posicionSegunda;
+    unsigned int listNumber[totalNumbber];
+    printf("¿Cúantos números son en total?\n");
+    scanf("%i", &totalNumbber);
+    for (int i = 0; i < totalNumbber; i++)
     {
         printf("\nNúmero %i:", i+1);
-        scanf("%i", &listaDeNumeros[i]);
+        scanf("%i", &listNumber[i]);
     }
 
     printf("el arreglo me lo entregaste así [ ");
 
-    for (int n = 0; n < numeroTotalDeNumeros; n++)
+    for (int n = 0; n < totalNumbber; n++)
     {
-        printf("%i ",listaDeNumeros[n]);
+        printf("%i ",listNumber[n]);
     }
     printf(" ]\n");
 
-    for (int i = 0; i < numeroTotalDeNumeros--; i++)
+    for (int i = 0; i < totalNumbber--; i++)
     {
-        for (int j = 0; j < numeroTotalDeNumeros--; j++)
+        for (int j = 0; j < totalNumbber--; j++)
         {
-            if (listaDeNumeros[j]>listaDeNumeros[j+1])
+            if (listNumber[j]>listNumber[j+1])
             {
-                posicionPrimera = listaDeNumeros[j];
-                listaDeNumeros[j]=listaDeNumeros[j+1];
-                listaDeNumeros[j+1]=posicionPrimera;
+                firstPosition = listNumber[j];
+                listNumber[j]=listNumber[j+1];
+                listNumber[j+1]=firstPosition;
             }
         }   
     }
     printf("Déspues de ordenarlo queda así [ ");
-    for (int n = 0; n < numeroTotalDeNumeros; n++)
+    for (int n = 0; n < totalNumbber; n++)
     {
-        printf("%i ",listaDeNumeros[n]);
+        printf("%i ",listNumber[n]);
     }
-    printf("]\n");
+    printf(" ]\n");
 }
